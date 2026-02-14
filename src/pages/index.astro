@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import AiRefiner from '../components/AiRefiner';
+import Philosophy from '../components/Philosophy.astro';
+import Portfolio from '../components/Portfolio.astro';
+import Careers from '../components/Careers.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout>
+  <Navbar client:load />
+  <Hero />
+  <Services />
+  <AiRefiner client:visible />
+  <Philosophy />
+  <Portfolio />
+  <Careers />
+  <Contact />
+  <Footer />
+</Layout>
