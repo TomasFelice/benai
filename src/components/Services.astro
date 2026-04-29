@@ -15,37 +15,55 @@ const services = [
     desc: 'Relaciones a largo plazo. Mantenimiento evolutivo e infraestructura Cloud para que nunca pares de crecer.',
     icon: 'zap',
   },
+  {
+    title: 'Inteligencia Artificial',
+    desc: 'Integramos IA en tu producto: automatizaciones, chatbots, análisis predictivo y flujos inteligentes que ahorran tiempo y costos.',
+    icon: 'brain',
+  },
 ];
 ---
 
-<section id="servicios" class="py-24 bg-gray-50">
+<section id="servicios" class="py-24 bg-gray-50" aria-labelledby="servicios-heading">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center mb-16">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+      <h2 id="servicios-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Menos complejidad.<br />Más resultados.
       </h2>
     </div>
-    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {services.map((service) => (
         <div class="relative group bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-gray-100">
           <div class="mb-6 inline-flex items-center justify-center rounded-2xl bg-blue-50 p-3 group-hover:bg-[#0071E3] transition-colors duration-300">
             <div class="text-[#0071E3] group-hover:text-white transition-colors duration-300">
               {service.icon === 'layers' && (
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                   <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
                   <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
                   <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
                 </svg>
               )}
               {service.icon === 'code' && (
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
                 </svg>
               )}
               {service.icon === 'zap' && (
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                   <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                </svg>
+              )}
+              {service.icon === 'brain' && (
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+                  <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+                  <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+                  <path d="M17.599 6.5a3 3 0 0 0 .399-1.375" />
+                  <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5" />
+                  <path d="M3.477 10.896a4 4 0 0 1 .585-.396" />
+                  <path d="M19.938 10.5a4 4 0 0 1 .585.396" />
+                  <path d="M6 18a4 4 0 0 1-1.967-.516" />
+                  <path d="M19.967 17.484A4 4 0 0 1 18 18" />
                 </svg>
               )}
             </div>

@@ -15,12 +15,14 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
   <Navbar client:load />
-  <Hero />
-  <Services />
-  <AiRefiner client:visible />
-  <Philosophy />
-  <Portfolio />
-  <Careers />
-  <Contact />
+  <main id="contenido-principal">
+    <Hero />
+    <Services />
+    <AiRefiner client:visible />
+    <Philosophy />
+    <Portfolio />
+    <Careers />
+    <Contact />
+  </main>
   <Footer />
 </Layout>

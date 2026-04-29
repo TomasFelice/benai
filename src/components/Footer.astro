@@ -11,30 +11,36 @@ const currentYear = new Date().getFullYear();
       <p class="text-sm text-gray-400 mt-2">© {currentYear} Benai Agency. Todos los derechos reservados.</p>
     </div>
 
-    <div class="flex space-x-6">
-      <!-- LinkedIn icon -->
-      <a href="#" class="text-gray-400 hover:text-[#0071E3] transition-colors">
-        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-          <rect width="4" height="12" x="2" y="9" />
-          <circle cx="4" cy="4" r="2" />
-        </svg>
-      </a>
-      <!-- Instagram icon -->
-      <a href="#" class="text-gray-400 hover:text-[#0071E3] transition-colors">
-        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-        </svg>
-      </a>
-      <!-- Mail icon -->
-      <a href="#" class="text-gray-400 hover:text-[#0071E3] transition-colors">
-        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect width="20" height="16" x="2" y="4" rx="2" />
-          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-        </svg>
-      </a>
-    </div>
+    <nav aria-label="Redes sociales">
+      <ul class="flex space-x-6 list-none m-0 p-0">
+        <li>
+          <a
+            href="https://www.instagram.com/benaiagency"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-400 hover:text-[#0071E3] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0071E3] rounded-sm"
+            aria-label="Seguir a Benai en Instagram (abre en nueva pestaña)"
+          >
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            href="mailto:felicetomasag@gmail.com"
+            class="text-gray-400 hover:text-[#0071E3] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0071E3] rounded-sm"
+            aria-label="Enviar email a Benai"
+          >
+            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </footer>

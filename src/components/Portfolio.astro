@@ -1,71 +1,77 @@
 ---
 const cases = [
   {
-    title: 'Retail E-commerce',
-    category: 'Desarrollo Web',
-    desc: 'Plataforma de ventas con sincronización de stock en tiempo real.',
-    color: 'bg-gray-100',
-  },
-  {
-    title: 'Fintech App',
-    category: 'Mobile App',
-    desc: 'Billetera virtual minimalista con enfoque en seguridad.',
-    color: 'bg-gray-50',
-  },
-  {
-    title: 'Consultora HR',
-    category: 'Branding & Web',
-    desc: 'Rebranding completo y portal corporativo.',
+    title: 'NexoStock',
+    category: 'Sistema de Gestión / SaaS',
+    desc: 'Sistema full-stack de inventario multi-depósito con integración a Tiendanube y sincronización en tiempo real.',
     color: 'bg-slate-50',
+    url: 'https://nexostock.benai.com.ar',
+    img: '/nexostock.png',
+    alt: 'Captura de pantalla de NexoStock, sistema SaaS de gestión de inventario multi-depósito',
+  },
+  {
+    title: 'Pura Bombilla',
+    category: 'E-commerce',
+    desc: 'Plataforma de comercio electrónico con panel de administración propio, IA multi-proveedor y gestión de pedidos.',
+    color: 'bg-amber-50',
+    url: 'https://purabombilla.benai.com.ar',
+    img: '/purabombilla.png',
+    alt: 'Captura de pantalla de Pura Bombilla, plataforma E-commerce con panel de administración propio',
+  },
+  {
+    title: 'Cala Studio',
+    category: 'Branding & Landing Page',
+    desc: 'Landing institucional para agencia creativa especializada en branding, experiencias digitales y redes sociales.',
+    color: 'bg-gray-100',
+    url: 'https://calastudio.benai.com.ar',
+    img: '/calastudio.png',
+    alt: 'Captura de pantalla de Cala Studio, landing institucional para agencia creativa de branding',
+  },
+  {
+    title: 'GymTrack',
+    category: 'PWA / App Mobile',
+    desc: 'App de seguimiento de rutinas con coach de IA integrado. Funciona 100% offline con almacenamiento local.',
+    color: 'bg-slate-900',
+    url: 'https://gymtrack.benai.com.ar',
+    img: '/gymtrack.png',
+    alt: 'Captura de pantalla de GymTrack, app PWA de seguimiento de rutinas con coach de IA',
   },
 ];
 ---
 
-<section id="casos" class="py-24 bg-white">
+<section id="casos" class="py-24 bg-white" aria-labelledby="casos-heading">
   <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="flex justify-between items-end mb-12">
-      <div>
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900">Casos de Éxito</h2>
-        <p class="mt-2 text-gray-500">Resultados reales para problemas reales.</p>
-      </div>
-      <a href="#" class="hidden md:flex items-center text-[#0071E3] font-semibold hover:underline">
-        Ver todos
-        <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-        </svg>
-      </a>
+    <div class="mb-12">
+      <h2 id="casos-heading" class="text-3xl font-bold tracking-tight text-gray-900">Casos de Éxito</h2>
+      <p class="mt-2 text-gray-500">Resultados reales para problemas reales.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {cases.map((item) => (
-        <div class="group cursor-pointer">
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0071E3] rounded-2xl"
+          aria-label={`Ver proyecto ${item.title} — ${item.category} (abre en nueva pestaña)`}
+        >
           <div class={`aspect-[4/3] w-full rounded-2xl ${item.color} mb-6 overflow-hidden relative`}>
-            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/5">
-              <span class="bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Ver Caso</span>
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/10" aria-hidden="true">
+              <span class="bg-white px-4 py-2 rounded-full text-sm font-medium shadow-sm">Ver Proyecto</span>
             </div>
-            <!-- Placeholder graphic -->
-            <div class="w-full h-full flex items-center justify-center text-gray-300">
-              <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z" />
-                <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65" />
-                <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65" />
-              </svg>
-            </div>
+            <img
+              src={item.img}
+              alt={item.alt}
+              class="w-full h-full object-cover object-top"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <p class="text-xs font-medium text-[#0071E3] uppercase tracking-wide mb-1">{item.category}</p>
           <h3 class="text-xl font-bold text-gray-900 group-hover:text-[#0071E3] transition-colors">{item.title}</h3>
           <p class="mt-2 text-sm text-gray-500">{item.desc}</p>
-        </div>
+        </a>
       ))}
-    </div>
-
-    <div class="mt-8 md:hidden">
-      <a href="#" class="flex items-center text-[#0071E3] font-semibold">
-        Ver todos los proyectos
-        <svg class="ml-1 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
-        </svg>
-      </a>
     </div>
   </div>
 </section>
